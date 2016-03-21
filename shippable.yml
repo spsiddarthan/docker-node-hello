@@ -15,7 +15,7 @@ build:
 
 integrations:
   hub:
-    - integrationName: "dockerint"
+    - integrationName: dockerint
       type: docker
       branches:
           only:
