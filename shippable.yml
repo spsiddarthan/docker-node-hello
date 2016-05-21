@@ -6,7 +6,6 @@ version:
 build:
   ci:
     - npm install
-    - npm test
 
   post_ci:
     - docker build -t siddarthan/centos-node-hello:$BRANCH.$BUILD_NUMBER .
