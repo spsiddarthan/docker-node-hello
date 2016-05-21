@@ -1,41 +1,18 @@
 language: node_js
 
+version:
+  - 0.12
 
+build:
+  ci:
+    - npm install
+    - npm test
 
+  post_ci:
+    - docker build -t siddarthan/centos-node-hello:$BRANCH.$BUILD_NUMBER .
+    - docker push siddarthan/centos-node-hello:$BRANCH.$BUILD_NUMBER
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+integrations:
+  hub:
+    - integrationName: "dockerint"
+      type: "docker"
