@@ -7,11 +7,4 @@ build:
   ci:
     - npm install
 
-  post_ci:
-    - docker build -t siddarthan/centos-node-hello:$BRANCH.$BUILD_NUMBER .
-    - docker push siddarthan/centos-node-hello:$BRANCH.$BUILD_NUMBER
-
-integrations:
-  hub:
-    - integrationName: "dockerint"
-      type: "docker"
+ 
