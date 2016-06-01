@@ -4,6 +4,7 @@ version:
   - 0.12
 
 build:
+
   ci:
     - npm install
     
